@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News-->
+        <scene sceneID="dd7-ef-bhl">
+            <objects>
+                <navigationController storyboardIdentifier="NewsTab" automaticallyAdjustsScrollViewInsets="NO" id="Abr-bg-MG2" userLabel="News" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browser" image="tab_brower" id="1Lx-cZ-aNF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="13e-0b-bdw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bpG-Zp-Mwm" kind="relationship" relationship="rootViewController" id="9g1-y1-AWd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9m-ia-18s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4413.6000000000004" y="586.69950738916259"/>
+        </scene>
+        <!--News View-->
+        <scene sceneID="LoL-0L-dxc">
+            <objects>
+                <viewController storyboardIdentifier="NewsView" id="bpG-Zp-Mwm" customClass="NewsView" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pYa-jV-xnF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gZG-Ws-PCP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OyE-fN-roz"/>
+                    <connections>
+                        <outlet property="container" destination="pYa-jV-xnF" id="4G5-pj-bZN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHn-ra-sNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4412" y="1429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_brower" width="16" height="16"/>
+    </resources>
+</document>

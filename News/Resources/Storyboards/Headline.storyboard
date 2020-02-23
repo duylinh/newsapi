@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Headline-->
+        <scene sceneID="ZP2-jx-DZZ">
+            <objects>
+                <navigationController storyboardIdentifier="HeadlineTab" automaticallyAdjustsScrollViewInsets="NO" id="99b-xV-TdE" userLabel="Headline" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browser" image="tab_brower" id="7w3-Xd-pho"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5j9-wQ-h70">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vNB-gV-vDK" kind="relationship" relationship="rootViewController" id="gw3-fn-dXD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzt-Dv-Hay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4413.6000000000004" y="586.69950738916259"/>
+        </scene>
+        <!--Headline View-->
+        <scene sceneID="eQ2-kx-VMy">
+            <objects>
+                <viewController storyboardIdentifier="HeadlineView" id="vNB-gV-vDK" customClass="HeadlineView" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ueV-RF-IWs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="91B-SN-VWQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zfD-ue-2sT"/>
+                    <connections>
+                        <outlet property="container" destination="ueV-RF-IWs" id="XMR-T3-Lox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qKv-M5-3v7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4412" y="1429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_brower" width="16" height="16"/>
+    </resources>
+</document>
