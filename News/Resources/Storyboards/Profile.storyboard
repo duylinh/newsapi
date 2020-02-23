@@ -12,7 +12,7 @@
         <scene sceneID="bvR-PF-lsg">
             <objects>
                 <navigationController storyboardIdentifier="ProfileTab" automaticallyAdjustsScrollViewInsets="NO" id="60c-44-Ou9" userLabel="Profile" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Browser" image="tab_brower" id="wvP-gI-XBN"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="tab_profile" id="wvP-gI-XBN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9o7-L4-cKQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -31,15 +31,15 @@
         <scene sceneID="Fpj-Mf-zVA">
             <objects>
                 <viewController storyboardIdentifier="ProfileView" id="OWh-Yl-5KQ" customClass="ProfileView" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4Jm-L9-k47">
+                    <view key="view" contentMode="scaleToFill" id="4UK-7t-Z0C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="z8w-dJ-PiV"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="aHV-Ox-9nn"/>
                     </view>
                     <navigationItem key="navigationItem" id="p5F-B4-YFA"/>
                     <connections>
-                        <outlet property="container" destination="4Jm-L9-k47" id="1Q6-lW-9tX"/>
+                        <outlet property="view" destination="4UK-7t-Z0C" id="T1x-Gy-Kav"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x45-W1-ahI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tab_brower" width="16" height="16"/>
+        <image name="tab_profile" width="24" height="24"/>
     </resources>
 </document>

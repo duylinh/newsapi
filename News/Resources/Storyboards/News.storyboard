@@ -12,7 +12,7 @@
         <scene sceneID="dd7-ef-bhl">
             <objects>
                 <navigationController storyboardIdentifier="NewsTab" automaticallyAdjustsScrollViewInsets="NO" id="Abr-bg-MG2" userLabel="News" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Browser" image="tab_brower" id="1Lx-cZ-aNF"/>
+                    <tabBarItem key="tabBarItem" title="News" image="tab_news" id="1Lx-cZ-aNF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="13e-0b-bdw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -31,15 +31,15 @@
         <scene sceneID="LoL-0L-dxc">
             <objects>
                 <viewController storyboardIdentifier="NewsView" id="bpG-Zp-Mwm" customClass="NewsView" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pYa-jV-xnF">
+                    <view key="view" contentMode="scaleToFill" id="mOb-2V-coZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="gZG-Ws-PCP"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Xgu-3y-RYW"/>
                     </view>
                     <navigationItem key="navigationItem" id="OyE-fN-roz"/>
                     <connections>
-                        <outlet property="container" destination="pYa-jV-xnF" id="4G5-pj-bZN"/>
+                        <outlet property="view" destination="mOb-2V-coZ" id="2Vi-v5-LAR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHn-ra-sNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tab_brower" width="16" height="16"/>
+        <image name="tab_news" width="23" height="23"/>
     </resources>
 </document>
