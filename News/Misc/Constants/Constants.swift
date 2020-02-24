@@ -23,3 +23,14 @@ enum Screen {
     static let MAX_LENGTH    = max(Screen.Width, Screen.Height)
     static let MIN_LENGTH    = min(Screen.Width, Screen.Height)
 }
+
+
+struct Constants {
+    
+    struct KeySearch {
+        static let bitcoin = "bitcoin"
+        static let apple = "apple"
+        static let earthquake = "earthquake"
+        static let animal = "animal"
+    }
+}

@@ -18,7 +18,7 @@ class ArticleDetailCell: UITableViewCell {
     }
     
     static var height: CGFloat {
-        return 300.0
+        return 200.0
     }
     
     // MARK: - Outlets

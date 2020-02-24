@@ -54,7 +54,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="155" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqq-Ho-H38" customClass="RoundedView" customModule="CalculatorDot" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqq-Ho-H38" customClass="RoundedView" customModule="News" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="155" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5M-oV-Q6j">

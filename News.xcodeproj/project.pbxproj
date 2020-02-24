@@ -54,6 +54,11 @@
 		3F41EF432403F5E500A68C2D /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F41EF422403F5E500A68C2D /* Article.storyboard */; };
 		3F41EF452404020800A68C2D /* UINavigationController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41EF442404020800A68C2D /* UINavigationController+Ex.swift */; };
 		3F41EF4A240407EF00A68C2D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41EF49240407EF00A68C2D /* WebViewController.swift */; };
+		3F41EF4C2404149D00A68C2D /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F41EF4B2404149D00A68C2D /* Popup.storyboard */; };
+		3F41EF4F240415AE00A68C2D /* BottomKeywordPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41EF4E240415AE00A68C2D /* BottomKeywordPopup.swift */; };
+		3F41EF51240416AC00A68C2D /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41EF50240416AC00A68C2D /* UIView+Ex.swift */; };
+		3F41EF542404235B00A68C2D /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41EF532404235B00A68C2D /* Popup.swift */; };
+		3F41EF56240424EB00A68C2D /* DispatchQueue+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41EF55240424EB00A68C2D /* DispatchQueue+Ex.swift */; };
 		447DA5D724037D6E00877D56 /* KeywordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA5D624037D6E00877D56 /* KeywordModel.swift */; };
 		447DA5EE2403D0D400877D56 /* KeywordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA5ED2403D0D400877D56 /* KeywordCell.swift */; };
 		447DA5F12403D15800877D56 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA5F02403D15800877D56 /* RoundedView.swift */; };
@@ -134,6 +139,11 @@
 		3F41EF422403F5E500A68C2D /* Article.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
 		3F41EF442404020800A68C2D /* UINavigationController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ex.swift"; sourceTree = "<group>"; };
 		3F41EF49240407EF00A68C2D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		3F41EF4B2404149D00A68C2D /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
+		3F41EF4E240415AE00A68C2D /* BottomKeywordPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomKeywordPopup.swift; sourceTree = "<group>"; };
+		3F41EF50240416AC00A68C2D /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		3F41EF532404235B00A68C2D /* Popup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		3F41EF55240424EB00A68C2D /* DispatchQueue+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Ex.swift"; sourceTree = "<group>"; };
 		447DA5D624037D6E00877D56 /* KeywordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordModel.swift; sourceTree = "<group>"; };
 		447DA5ED2403D0D400877D56 /* KeywordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCell.swift; sourceTree = "<group>"; };
 		447DA5F02403D15800877D56 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -281,6 +291,7 @@
 				3F41EF3B2403F3ED00A68C2D /* ArticleDetail */,
 				3F2B67D62402A7B50099B445 /* Root */,
 				3F41EF46240406EB00A68C2D /* WebView */,
+				3F41EF4D2404158D00A68C2D /* Popup */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -428,6 +439,7 @@
 				3F2B680B2402AA5B0099B445 /* News.storyboard */,
 				3F2B680D2402AA790099B445 /* Profile.storyboard */,
 				3F41EF422403F5E500A68C2D /* Article.storyboard */,
+				3F41EF4B2404149D00A68C2D /* Popup.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -518,6 +530,22 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		3F41EF4D2404158D00A68C2D /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				3F41EF4E240415AE00A68C2D /* BottomKeywordPopup.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		3F41EF522404235B00A68C2D /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				3F41EF532404235B00A68C2D /* Popup.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		447DA5D824037E2400877D56 /* Jsons */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +565,7 @@
 		447DA5E52403B4D800877D56 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				3F41EF55240424EB00A68C2D /* DispatchQueue+Ex.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -544,6 +573,7 @@
 		447DA5E82403CF9600877D56 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				3F41EF522404235B00A68C2D /* Popup */,
 				447DA5F52403DBE300877D56 /* AlignedFlowLayout */,
 			);
 			path = Libs;
@@ -561,7 +591,6 @@
 			isa = PBXGroup;
 			children = (
 				447DA5F02403D15800877D56 /* RoundedView.swift */,
-				3F41EF442404020800A68C2D /* UINavigationController+Ex.swift */,
 			);
 			path = "UI+";
 			sourceTree = "<group>";
@@ -569,7 +598,9 @@
 		447DA5F22403D1A000877D56 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3F41EF442404020800A68C2D /* UINavigationController+Ex.swift */,
 				447DA5F32403D1A900877D56 /* UIImage+Ex.swift */,
+				3F41EF50240416AC00A68C2D /* UIView+Ex.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -703,6 +734,7 @@
 				3F2B67A8240297E40099B445 /* LaunchScreen.storyboard in Resources */,
 				3F2B68222402AE550099B445 /* Main.storyboard in Resources */,
 				3F41EF3324034DB700A68C2D /* ArticleDetailTitleCell.xib in Resources */,
+				3F41EF4C2404149D00A68C2D /* Popup.storyboard in Resources */,
 				3F2B680C2402AA5B0099B445 /* News.storyboard in Resources */,
 				3F41EF2F24034DA500A68C2D /* ArticleDetailCell.xib in Resources */,
 				3F2B67EA2402A7B60099B445 /* Assets.xcassets in Resources */,
@@ -778,6 +810,7 @@
 				3F2B68122402AB960099B445 /* Storyboard.swift in Sources */,
 				447DA5F72403DBE400877D56 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				3F2B6799240297E10099B445 /* AppDelegate.swift in Sources */,
+				3F41EF542404235B00A68C2D /* Popup.swift in Sources */,
 				3F2B682E2402C6BF0099B445 /* NewsAPI.swift in Sources */,
 				447DA5F42403D1A900877D56 /* UIImage+Ex.swift in Sources */,
 				3F2B68022402A9CC0099B445 /* NewsViewDataSource.swift in Sources */,
@@ -789,6 +822,7 @@
 				3F41EF392403534600A68C2D /* ErrorViewModel.swift in Sources */,
 				447DA5D724037D6E00877D56 /* KeywordModel.swift in Sources */,
 				3F41EF36240350B600A68C2D /* ArticleCell.swift in Sources */,
+				3F41EF4F240415AE00A68C2D /* BottomKeywordPopup.swift in Sources */,
 				3F2B68282402C63C0099B445 /* APIService.swift in Sources */,
 				3F2B68002402A9BE0099B445 /* NewsView.swift in Sources */,
 				3F2B681A2402AC710099B445 /* CoreDataManager+Wrapper.swift in Sources */,
@@ -809,10 +843,12 @@
 				3F41EF2B24034A1600A68C2D /* Colors.swift in Sources */,
 				3F2B67FC2402A9890099B445 /* ProfileViewDataSource.swift in Sources */,
 				3F41EF4A240407EF00A68C2D /* WebViewController.swift in Sources */,
+				3F41EF56240424EB00A68C2D /* DispatchQueue+Ex.swift in Sources */,
 				3F41EF452404020800A68C2D /* UINavigationController+Ex.swift in Sources */,
 				3F2B67FA2402A9650099B445 /* ProfileView.swift in Sources */,
 				3F2B67E92402A7B60099B445 /* News.xcdatamodeld in Sources */,
 				3F2B68082402AA320099B445 /* RootTabController.swift in Sources */,
+				3F41EF51240416AC00A68C2D /* UIView+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,7 +945,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -963,7 +999,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -981,7 +1017,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55ZTBJ324;
 				INFOPLIST_FILE = "$(SRCROOT)/News/Misc/Configures/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1002,7 +1038,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55ZTBJ324;
 				INFOPLIST_FILE = "$(SRCROOT)/News/Misc/Configures/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

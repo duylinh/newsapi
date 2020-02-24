@@ -21,8 +21,8 @@ class KeywordCell: UICollectionViewCell {
         
         let tintColor: UIColor = .black
         
-        self.roundedView.backgroundColor = .white
-        self.roundedView.borderColor = Colors.paleGrey
+        self.roundedView.backgroundColor = Colors.paleGrey
+        self.roundedView.borderColor = Colors.navyBlueTwo
         self.roundedView.borderWidth = 0.4
         
         self.checkImageView.image = item.isSelected ?

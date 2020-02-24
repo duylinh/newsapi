@@ -7,6 +7,7 @@
 //
 
 import UIKit
+// swiftlint:disable all
 
 class BaseController: UIViewController {
     
@@ -40,6 +41,23 @@ class BaseController: UIViewController {
                     let barButton = UIBarButtonItem(customView: button)
                     self.navigationItem.leftBarButtonItem = barButton
                 }
+            }
+        }
+    }
+    
+    var leftBarTitle: String? {
+        didSet {
+            if let name = self.leftBarTitle {
+                let textColor = UIColor.black
+                let button = UIButton(type: .custom)
+                button.setTitle(name, for: .normal)
+                button.frame = CGRect(x: 0, y: 0, width: 100, height: 44)
+                button.contentHorizontalAlignment = .left
+                button.titleLabel?.textColor = textColor
+                button.setTitleColor(textColor, for: .normal)
+                button.addTarget(self, action: #selector(leftMenuAction), for: .touchUpInside)
+                let barButton = UIBarButtonItem(customView: button)
+                self.navigationItem.leftBarButtonItem = barButton
             }
         }
     }
@@ -112,5 +130,6 @@ class BaseController: UIViewController {
     @objc func backAction() {
         self.navigationController?.popViewController(animated: true)
     }
+    @objc func leftMenuAction() {}
 
 }
