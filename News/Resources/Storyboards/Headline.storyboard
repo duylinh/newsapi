@@ -34,17 +34,30 @@
                     <view key="view" contentMode="scaleToFill" id="lZ7-UB-tmt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lvx-ig-PYQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lvx-ig-PYQ" firstAttribute="top" secondItem="3hd-65-lW2" secondAttribute="top" id="2xe-fD-55l"/>
+                            <constraint firstItem="lvx-ig-PYQ" firstAttribute="trailing" secondItem="3hd-65-lW2" secondAttribute="trailing" id="5an-JZ-hbK"/>
+                            <constraint firstItem="lvx-ig-PYQ" firstAttribute="leading" secondItem="3hd-65-lW2" secondAttribute="leading" id="XcP-Qv-P1D"/>
+                            <constraint firstItem="lvx-ig-PYQ" firstAttribute="bottom" secondItem="3hd-65-lW2" secondAttribute="bottom" id="pgv-4f-1zu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3hd-65-lW2"/>
                     </view>
                     <navigationItem key="navigationItem" id="zfD-ue-2sT"/>
                     <connections>
+                        <outlet property="tableView" destination="lvx-ig-PYQ" id="PXA-p7-e7a"/>
                         <outlet property="view" destination="lZ7-UB-tmt" id="0Yl-Jq-5XC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKv-M5-3v7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4412" y="1429"/>
+            <point key="canvasLocation" x="4411.594202898551" y="1428.3482142857142"/>
         </scene>
     </scenes>
     <resources>

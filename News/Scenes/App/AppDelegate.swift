@@ -17,12 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - App lifecycle
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        APIService.shared.getTopHeadlines(in: "us") { (results) in
-            print(results)
-        }
-        APIService.shared.getEverything(with: "bitcoin") { (results) in
-            print(results)
-        }
+        
+//        APIService.shared.getEverything(with: "bitcoin") { (results) in
+//            print(results)
+//        }
         self.window?.isHidden = true
         let rootController = RootTabController.instantiate()
         self.setRootController(rootController, animated: true)

@@ -34,7 +34,19 @@
                     <view key="view" contentMode="scaleToFill" id="mOb-2V-coZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2qN-De-fHI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2qN-De-fHI" firstAttribute="leading" secondItem="Xgu-3y-RYW" secondAttribute="leading" id="C9Q-Bu-Y6Q"/>
+                            <constraint firstItem="2qN-De-fHI" firstAttribute="top" secondItem="Xgu-3y-RYW" secondAttribute="top" id="Upb-lW-7B9"/>
+                            <constraint firstItem="2qN-De-fHI" firstAttribute="bottom" secondItem="Xgu-3y-RYW" secondAttribute="bottom" id="b24-bk-UR6"/>
+                            <constraint firstItem="2qN-De-fHI" firstAttribute="trailing" secondItem="Xgu-3y-RYW" secondAttribute="trailing" id="wHS-Rf-d91"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xgu-3y-RYW"/>
                     </view>
                     <navigationItem key="navigationItem" id="OyE-fN-roz"/>
@@ -44,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHn-ra-sNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4412" y="1429"/>
+            <point key="canvasLocation" x="4411.594202898551" y="1428.3482142857142"/>
         </scene>
     </scenes>
     <resources>
