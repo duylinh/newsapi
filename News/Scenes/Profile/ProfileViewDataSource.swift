@@ -26,15 +26,13 @@ final class ProfileViewDataSource: NSObject {
     // MARK: - Internal methods
     
     func configure(with collectionView: UICollectionView) {
-        
-        collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
         collectionView.isScrollEnabled = false
         collectionView.roundCorners(.allCorners, radius: 8.0)
         
         let flowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .top)
-        flowLayout.itemSize = CGSize(width: 155, height: 40)
+        flowLayout.itemSize = CGSize(width: 130, height: 40)
         flowLayout.minimumInteritemSpacing = 10
         flowLayout.minimumLineSpacing = 10
         flowLayout.estimatedItemSize = CGSize(width: 155, height: 40)
@@ -61,8 +59,3 @@ extension ProfileViewDataSource : UICollectionViewDataSource {
     }
 }
 
-extension ProfileViewDataSource: UICollectionViewDelegate {
-    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.updateKeywords(with: indexPath)
-    }
-}

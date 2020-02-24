@@ -10,11 +10,6 @@ import UIKit
 
 // swiftlint:disable all
 
-
-let statusBarStyle: UIStatusBarStyle = .default
-let defaultBackgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
-let navTextColor = #colorLiteral(red: 0.05490196078, green: 0.1333333333, blue: 0.2392156863, alpha: 1)
-
 enum Screen {
     static let Width = UIScreen.main.bounds.size.width
     static let Height = UIScreen.main.bounds.size.height
@@ -26,11 +21,15 @@ enum Screen {
 
 
 struct Constants {
-    
     struct KeySearch {
         static let bitcoin = "bitcoin"
         static let apple = "apple"
         static let earthquake = "earthquake"
         static let animal = "animal"
+    }
+    
+    struct CoreData {
+        static let SQLiteStoreName = "News.sqlite"
+        static let isInitial = "News.CoreData.isInitial"
     }
 }

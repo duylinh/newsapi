@@ -9,23 +9,47 @@
 import UIKit
 import CoreData
 
+// swiftlint:disable all
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Vars
     var window: UIWindow?
+    var coreDataManager: CoreDataManager =  CoreDataManager.shared
     
     // MARK: - App lifecycle
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        guard ProcessInfo.processInfo.environment["runningTests"] == nil else {
+            FileManager.clearApplicationSupportDirectoryContents()
+            return true
+        }
         
-//        APIService.shared.getEverything(with: "bitcoin") { (results) in
-//            print(results)
-//        }
-        self.window?.isHidden = true
-        let rootController = RootTabController.instantiate()
-        self.setRootController(rootController, animated: true)
-        self.window?.isHidden = false
+        coreDataManager.setup { (isInitial) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.window?.isHidden = true
+                let rootController = RootTabController.instantiate()
+                self.setRootController(rootController, animated: true)
+                self.window?.isHidden = false
+                
+                if isInitial {
+                    delay(0.01) {
+                        self.coreDataManager.createKeyword(keyword: "bitcoin", isSelected: true) { (_) in }
+                        self.coreDataManager.createKeyword(keyword: "apple", isSelected: true) { (_) in }
+                        self.coreDataManager.createKeyword(keyword: "earthquake", isSelected: true) { (_) in }
+                        self.coreDataManager.createKeyword(keyword: "animal", isSelected: true) { (_) in }
+                    }
+                }
+            }
+        }
         return true
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        // Saves changes in the application's managed object context before the application terminates.
+        
+        try? CoreDataManager.shared.mainContext.save()
     }
 
     // MARK: - fileprivate

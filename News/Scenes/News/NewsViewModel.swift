@@ -32,9 +32,9 @@ final class NewsViewModel {
         }
     }
     
-    var index: Int = 0 {
+    var selectedIndex: Int = 0 {
         didSet {
-            self.keyword = self.keywords[index].keyword
+            self.keyword = self.keywords[selectedIndex].keyword
         }
     }
     
@@ -58,26 +58,25 @@ final class NewsViewModel {
     }
     
     func fetchKeywords() {
-        let keyword1 = KeywordModel(keyword: "bitcoin", isSelected: true)
-        let keyword2 = KeywordModel(keyword: "apple", isSelected: false)
-        let keyword3 = KeywordModel(keyword: "earthquake", isSelected: false)
-        let keyword4 = KeywordModel(keyword: "animal", isSelected: false)
-        keywords = [keyword1, keyword2, keyword3, keyword4]
+        CoreDataManager.shared.fetchAllKeywordsActive { (results) in
+            var keys: [KeywordModel] = []
+            for (index, item) in results.enumerated() {
+                guard let key = item.keyword else { return }
+                let keyword = KeywordModel(keyword: key, isSelected: index == self.selectedIndex)
+                keys.append(keyword)
+            }
+            self.keywords = keys
+        }
     }
     
     func updateKeywords(with indexPath: IndexPath) {
         var keys: [KeywordModel] = []
         for (index, keyword) in keywords.enumerated() {
-            if indexPath.row == index {
-                let key = KeywordModel(keyword: keyword.keyword, isSelected: true)
-                keys.append(key)
-            } else {
-                let key = KeywordModel(keyword: keyword.keyword, isSelected: false)
-                keys.append(key)
-            }
+            let key = KeywordModel(keyword: keyword.keyword, isSelected: index == indexPath.row)
+            keys.append(key)
         }
         self.keywords = keys
-        self.index = indexPath.row
+        self.selectedIndex = indexPath.row
     }
     
     // MARK: Helpers

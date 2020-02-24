@@ -31,8 +31,8 @@ class ArticleCell: UITableViewCell, ImageDownloaderDelegate {
     // MARK: - Overrides
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = defaultBackgroundColor
-        self.contentView.backgroundColor = defaultBackgroundColor
+        self.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
+        self.contentView.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
         self.articleImageView.layer.cornerRadius = CGFloat(8)
     }
     

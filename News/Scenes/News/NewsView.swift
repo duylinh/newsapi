@@ -35,7 +35,7 @@ final class NewsView: BaseController {
         
         displayLoading()
         viewModel.fetchKeywords()
-        viewModel.index = 0
+        viewModel.selectedIndex = 0
     }
 }
 

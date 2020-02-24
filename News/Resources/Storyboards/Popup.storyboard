@@ -23,7 +23,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3F-Lz-Tw9">
                                 <rect key="frame" x="0.0" y="5" width="414" height="320"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add keywords to your keyword list by clicking up the keywords below." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM6-kW-xaN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add/remove keywords to your keyword list by select/ deselect keywords below. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM6-kW-xaN">
                                         <rect key="frame" x="20" y="15" width="374" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -35,7 +35,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="160" id="M8K-pT-LSR"/>
                                         </constraints>
-                                        <collectionViewLayout key="collectionViewLayout" id="rNu-f9-Hd0" customClass="AlignedCollectionViewFlowLayout" customModule="CalculatorDot" customModuleProvider="target"/>
+                                        <collectionViewLayout key="collectionViewLayout" id="rNu-f9-Hd0" customClass="AlignedCollectionViewFlowLayout" customModule="News" customModuleProvider="target"/>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KeywordCell" id="sl8-ix-naU" userLabel="KeywordCell" customClass="KeywordCell" customModule="News" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="155" height="40"/>
@@ -103,7 +103,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QHV-jA-JjA"/>
                                         </constraints>
-                                        <state key="normal" title="DONE"/>
+                                        <state key="normal" title="SAVE"/>
                                         <connections>
                                             <action selector="doneButtonTapped:" destination="Fbb-rC-Q9G" eventType="touchUpInside" id="gYG-CZ-TgC"/>
                                         </connections>
@@ -137,7 +137,7 @@
                         <outlet property="collectionView" destination="riy-ZJ-SWL" id="rHW-0w-xgK"/>
                         <outlet property="containView" destination="S3F-Lz-Tw9" id="DYn-j5-1Xa"/>
                         <outlet property="containViewHeightConstraint" destination="KUI-81-rOZ" id="LMM-6Q-9sI"/>
-                        <outlet property="doneButton" destination="acp-8I-R4O" id="8f1-dE-Qa7"/>
+                        <outlet property="saveButton" destination="acp-8I-R4O" id="8f1-dE-Qa7"/>
                         <outlet property="titleLabel" destination="VM6-kW-xaN" id="pdP-lK-QcX"/>
                         <outlet property="view" destination="VBK-z9-eME" id="QMg-sJ-Syo"/>
                     </connections>

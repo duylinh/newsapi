@@ -26,25 +26,15 @@ final class ProfileViewModel {
         
     // MARK: - Fetch
     
-    func fetchKeywordsFromDB() {
-        let keyword1 = KeywordModel(keyword: "bitcoin", isSelected: true)
-        let keyword2 = KeywordModel(keyword: "apple", isSelected: false)
-        let keyword3 = KeywordModel(keyword: "earthquake", isSelected: false)
-        let keyword4 = KeywordModel(keyword: "animal", isSelected: false)
-        keywords = [keyword1, keyword2, keyword3, keyword4]
-    }
-    
-    func updateKeywords(with indexPath: IndexPath) {
-        var keys: [KeywordModel] = []
-        for (index, keyword) in keywords.enumerated() {
-            if indexPath.row == index {
-                let key = KeywordModel(keyword: keyword.keyword, isSelected: true)
-                keys.append(key)
-            } else {
-                let key = KeywordModel(keyword: keyword.keyword, isSelected: false)
+    func fetchKeywordsActive() {
+        CoreDataManager.shared.fetchAllKeywordsActive { (results) in
+            var keys: [KeywordModel] = []
+            for item in results {
+                guard let keyword = item.keyword else { return }
+                let key = KeywordModel(keyword: keyword, isSelected: true)
                 keys.append(key)
             }
+            self.keywords = keys
         }
-        self.keywords = keys
     }
 }

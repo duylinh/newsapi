@@ -62,6 +62,23 @@ class BaseController: UIViewController {
         }
     }
     
+    var rightBarTitle: String? {
+        didSet {
+            if let name = self.rightBarTitle {
+                let textColor = UIColor.black
+                let button = UIButton(type: .custom)
+                button.setTitle(name, for: .normal)
+                button.frame = CGRect(x: 0, y: 0, width: 100, height: 44)
+                button.contentHorizontalAlignment = .right
+                button.titleLabel?.textColor = textColor
+                button.setTitleColor(textColor, for: .normal)
+                button.addTarget(self, action: #selector(rightMenuAction), for: .touchUpInside)
+                let barButton = UIBarButtonItem(customView: button)
+                self.navigationItem.rightBarButtonItem = barButton
+            }
+        }
+    }
+    
     private var keyboardWillShowObserver: NSObjectProtocol?
     private var keyboardWillHideObserver: NSObjectProtocol?
     

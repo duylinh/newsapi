@@ -27,13 +27,12 @@ final class ProfileView: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
-        self.rightBarImage = "ic_nav_add"
-        self.leftBarTitle = "Register"
+        self.rightBarTitle = "Keyword"
         
         viewModel.delegate = self
         dataSource.configure(with: collectionView)
         displayLoading()
-        viewModel.fetchKeywordsFromDB()
+        viewModel.fetchKeywordsActive()
     }
     
     // MARK: - Actions
@@ -55,10 +54,6 @@ final class ProfileView: BaseController {
             controller?.fetchKeywordsFromLocalDB()
         }
     }
-    
-    override func leftMenuAction() {
-        
-    }
 }
 
 extension ProfileView: ProfileViewModelDelegate {
@@ -71,7 +66,18 @@ extension ProfileView: ProfileViewModelDelegate {
 }
 
 extension ProfileView: BottomKeywordPopupDelegate {
-    func saveKeywords() {
+    func saveKeywords(_ keywords: [KeywordModel]) {
+        defer {
+            self.viewModel.keywords = keywords
+//            let coreDataManager = CoreDataManager.shared
+//            coreDataManager.fetchAllKeywords { (results) in
+//                for key in keywords {
+//                    for item in results {
+//                        coreDataManager.updateKeyword(for: item, keyword: key.keyword, isSelected: key.isSelected) { (_) in }
+//                    }
+//                }
+//            }
+        }
         self.dismissPopup { (_) in }
     }
 }
