@@ -11,17 +11,14 @@ import UIKit
 final class HeadlineViewDataSource: NSObject {
     
     // MARK: - Properties
-    
     private unowned let viewModel: HeadlineViewModel
 
     // MARK: - Con(De)structor
-    
     init(viewModel: HeadlineViewModel) {
         self.viewModel = viewModel
     }
 
     // MARK: - Internal methods
-    
     func configure(with tableView: UITableView) {
         tableView.backgroundColor = Colors.paleGrey
         tableView.dataSource = self

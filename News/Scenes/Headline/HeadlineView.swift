@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HeadlineView: UIViewController {
+final class HeadlineView: BaseController {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -26,7 +26,7 @@ final class HeadlineView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Top News"
         viewModel.delegate = self
         dataSource.configure(with: tableView)
         viewModel.fetchData()

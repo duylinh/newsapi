@@ -11,6 +11,6 @@ import Foundation
 
 protocol ServicesProtocol {
     func getTopHeadlines(in country: String, completion: @escaping (Result<[ArticleModel]?>) -> Void)
-    func getEverything(with keyword: String, completion: @escaping (Result<[ArticleModel]?>) -> Void)
-    func getFilteredEverything(with keyword: String, and param: String, completion: @escaping (Result<[ArticleModel]?>) -> Void)
+    func getEverything(keyword: String, completion: @escaping (Result<[ArticleModel]?>) -> Void)
+    func getFilteredEverything(keyword: String, and param: String, completion: @escaping (Result<[ArticleModel]?>) -> Void)
 }

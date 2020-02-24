@@ -22,7 +22,7 @@ final class APIService: ServicesProtocol {
         session = URLSession.init(configuration: config)
     }
     
-    func getTopHeadlines(in countryCode: String, completion: @escaping (Result<[ArticleModel]?>) -> Void) {
+    func getTopHeadlines(in countryCode: String = "us", completion: @escaping (Result<[ArticleModel]?>) -> Void) {
         guard let url = URL(string: NewsAPI.getHeadlinesURL(country: countryCode)) else {return}
         session.dataTask(with: url) { (data, response
             , error) in
@@ -38,7 +38,7 @@ final class APIService: ServicesProtocol {
         }.resume()
     }
     
-    func getEverything(with keyword: String, completion: @escaping (Result<[ArticleModel]?>) -> Void) {
+    func getEverything(keyword: String, completion: @escaping (Result<[ArticleModel]?>) -> Void) {
         guard let url = URL(string: NewsAPI.getEverythingURL(searchKeyword: keyword)) else {return}
         session.dataTask(with: url) { (data, response
             , error) in
@@ -54,7 +54,7 @@ final class APIService: ServicesProtocol {
         }.resume()
     }
     
-    func getFilteredEverything(with keyword: String, and param: String, completion: @escaping (Result<[ArticleModel]?>) -> Void) {
+    func getFilteredEverything(keyword: String, and param: String, completion: @escaping (Result<[ArticleModel]?>) -> Void) {
         guard let url = URL(string: NewsAPI.getFilterEverythingURL(searchKeyword: keyword, source: param)) else {return}
         session.dataTask(with: url) { (data, response
             , error) in

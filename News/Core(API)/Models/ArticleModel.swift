@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ArticleModel: Decodable{
+struct ArticleModel: Decodable {
     
     let author: String?
     let title: String?
@@ -19,7 +19,7 @@ struct ArticleModel: Decodable{
     let content: String?
     let source: Source?
     
-    struct Source: Decodable{
+    struct Source: Decodable {
         let id: String?
         let name: String?
     }

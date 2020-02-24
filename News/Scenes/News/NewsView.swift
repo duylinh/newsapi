@@ -8,23 +8,56 @@
 
 import UIKit
 
-class NewsView: UIViewController {
-
+final class NewsView: UIViewController {
+    
+    // MARK: - Outlets
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    // MARK: - Properties
+    private lazy var viewModel: NewsViewModel = {
+        return .init()
+    }()
+    
+    private lazy var dataSource: NewsViewDataSource = {
+        return NewsViewDataSource(viewModel: self.viewModel)
+    }()
+    
+    private var index: Int = 0
+    
+    // MARK: - Overridden: UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "News"
+        viewModel.delegate = self
+        
+        dataSource.configure(with: tableView)
+        
+        dataSource.configure(with: collectionView)
+        viewModel.fetchKeywords()
+        viewModel.index = 0
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension NewsView: NewsViewModelDelegate {
+    func fetchNewsAndDidUpdateTable(_ viewModel: NewsViewModel) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func didSelectItem(_ item: ArticleModel) {
+        
     }
-    */
-
+    
+    func loadKeywordsAndDidUpdateKeysCollection(_ viewModel: NewsViewModel) {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func showAlertError(_ error: ErrorViewModel) {
+        
+    }
 }

@@ -18,7 +18,7 @@ class ArticleCell: UITableViewCell, ImageDownloaderDelegate {
     }
     
     static var height: CGFloat {
-        return 200.0
+        return 150.0
     }
     var imageDownloader: ImageDownloader?
     
@@ -33,7 +33,7 @@ class ArticleCell: UITableViewCell, ImageDownloaderDelegate {
         super.awakeFromNib()
         self.backgroundColor = defaultBackgroundColor
         self.contentView.backgroundColor = defaultBackgroundColor
-        self.articleImageView.layer.cornerRadius = cornerRadius
+        self.articleImageView.layer.cornerRadius = CGFloat(8)
     }
     
     // MARK: - Configure

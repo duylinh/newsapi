@@ -10,18 +10,44 @@ import UIKit
 
 class BaseController: UIViewController {
     
-    // MARK: Internal Properties
-    
+    // MARK: - Vars
     let spinner = UIActivityIndicatorView(style: .gray)
     let spinnerView = UIView()
     
-    // MARK: Private Properties
+    var rightBarImage: String? {
+        didSet {
+            if let name = self.rightBarImage {
+                if let resourceImage = UIImage(named: name) {
+                    let button = UIButton(type: .custom)
+                    button.setImage(resourceImage, for: .normal)
+                    button.frame = CGRect(x: 0, y: 0, width: 40, height: 44)
+                    button.addTarget(self, action: #selector(rightMenuAction), for: .touchUpInside)
+                    let barButton = UIBarButtonItem(customView: button)
+                    self.navigationItem.rightBarButtonItem = barButton
+                }
+            }
+        }
+    }
+    
+    var backBarImage: String? {
+        didSet {
+            if let name = self.backBarImage {
+                if let resourceImage = UIImage(named: name) {
+                    let button = UIButton(type: .custom)
+                    button.setImage(resourceImage, for: .normal)
+                    button.frame = CGRect(x: 0, y: 0, width: 40, height: 44)
+                    button.addTarget(self, action: #selector(backAction), for: .touchUpInside)
+                    let barButton = UIBarButtonItem(customView: button)
+                    self.navigationItem.leftBarButtonItem = barButton
+                }
+            }
+        }
+    }
     
     private var keyboardWillShowObserver: NSObjectProtocol?
     private var keyboardWillHideObserver: NSObjectProtocol?
     
-    // MARK: UIViewController
-    
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -36,8 +62,7 @@ class BaseController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
-    // MARK: Internal Helpers
-    
+    // MARK: - Internal
     func keyboardWillShow(keyboardHeight: CGFloat) {}
     func keyboardWillHide(keyboardHeight: CGFloat) {}
     
@@ -53,8 +78,7 @@ class BaseController: UIViewController {
         spinner.stopAnimating()
     }
     
-    // MARK: Private Helpers
-    
+    // MARK: - Private
     private func setupNavigationBar() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -81,4 +105,12 @@ class BaseController: UIViewController {
         ]
         NSLayoutConstraint.activate(spinnerConstraints)
     }
+    
+    // MARK: - Actions
+    @objc func rightMenuAction() {}
+    
+    @objc func backAction() {
+        self.navigationController?.popViewController(animated: true)
+    }
+
 }
