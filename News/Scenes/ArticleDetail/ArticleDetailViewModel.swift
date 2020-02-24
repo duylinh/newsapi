@@ -10,7 +10,7 @@ import Foundation
 
 protocol ArticleDetailViewModelDelegate: class {
     func didUpdateTableView(_ viewModel: ArticleDetailViewModel)
-    func didSelectOnView(_ item: ArticleModel)
+    func didSelectOnView(_ article: ArticleModel)
 }
 
 final class ArticleDetailViewModel {

@@ -40,5 +40,41 @@
             </objects>
             <point key="canvasLocation" x="-27.536231884057973" y="26.116071428571427"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="SG0-XH-ajR">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="WS4-qk-0IS" customClass="WebViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NzI-Mc-8Sb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSl-tQ-TSP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pSl-tQ-TSP" firstAttribute="bottom" secondItem="sXM-Z5-UR0" secondAttribute="bottom" id="6V5-h1-k8z"/>
+                            <constraint firstItem="pSl-tQ-TSP" firstAttribute="leading" secondItem="sXM-Z5-UR0" secondAttribute="leading" id="acP-EK-rWP"/>
+                            <constraint firstItem="pSl-tQ-TSP" firstAttribute="top" secondItem="sXM-Z5-UR0" secondAttribute="top" id="bfb-c2-OBf"/>
+                            <constraint firstItem="pSl-tQ-TSP" firstAttribute="trailing" secondItem="sXM-Z5-UR0" secondAttribute="trailing" id="rtH-ph-wpw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sXM-Z5-UR0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jvt-pb-kB4"/>
+                    <connections>
+                        <outlet property="view" destination="NzI-Mc-8Sb" id="8xA-i4-ywe"/>
+                        <outlet property="webView" destination="pSl-tQ-TSP" id="CmG-6d-vGj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onl-56-jL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27.536231884057973" y="26.116071428571427"/>
+        </scene>
     </scenes>
 </document>

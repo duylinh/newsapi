@@ -52,7 +52,10 @@ extension ArticleDetailView: ArticleDetailViewModelDelegate {
         }
     }
     
-    func didSelectOnView(_ item: ArticleModel) {
-        
+    func didSelectOnView(_ article: ArticleModel) {
+        let controller = WebViewController.instantiate()
+        self.navigationController?.push(controller, animated: false, completion: {
+            controller.article = article
+        })
     }
 }
