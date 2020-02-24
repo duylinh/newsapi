@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArticleDetailCell: UITableViewCell  {
+class ArticleDetailCell: UITableViewCell {
 
     // MARK: - Vars
     static let Identifier = "ArticleDetailCell"
@@ -18,7 +18,7 @@ class ArticleDetailCell: UITableViewCell  {
     }
     
     static var height: CGFloat {
-        return 200.0
+        return 300.0
     }
     
     // MARK: - Outlets

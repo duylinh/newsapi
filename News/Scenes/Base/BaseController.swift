@@ -73,7 +73,7 @@ class BaseController: UIViewController {
         spinner.startAnimating()
     }
     
-    func displayContent() {
+    func hideLoading() {
         spinnerView.isHidden = true
         spinner.stopAnimating()
     }

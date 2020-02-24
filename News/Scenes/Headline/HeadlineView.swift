@@ -29,6 +29,7 @@ final class HeadlineView: BaseController {
         self.title = "Top News"
         viewModel.delegate = self
         dataSource.configure(with: tableView)
+        displayLoading()
         viewModel.fetchData()
     }
 }
@@ -37,14 +38,18 @@ extension HeadlineView: HeadlineViewModelDelegate {
     func fetchDataAndDidUpdate(_ viewModel: HeadlineViewModel) {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.hideLoading()
         }
     }
     
-    func didSelectItem(_ item: ArticleModel) {
-        
+    func didSelectItem(_ article: ArticleModel) {
+        let controller = ArticleDetailView.instantiate()
+        self.navigationController?.push(controller, animated: false, completion: {
+            controller.article = article
+        })
     }
     
     func showAlertError(_ error: ErrorViewModel) {
-        
+        self.hideLoading()
     }
 }

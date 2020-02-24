@@ -44,7 +44,7 @@ class ArticleDetailTitleCell: UITableViewCell, ImageDownloaderDelegate {
         guard let article = article else { return }
         titleLabel.text = article.title
         sourceLabel.text = article.source?.name
-        if let url = URL(string: article.urlToImage ?? ""){
+        if let url = URL(string: article.urlToImage ?? "") {
             self.imageDownloader = ImageDownloader(imageURL: url)
             self.imageDownloader?.delegate = self
             self.imageDownloader?.downloadImage()

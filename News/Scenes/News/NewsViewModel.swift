@@ -10,7 +10,7 @@ import Foundation
 
 protocol NewsViewModelDelegate: class {
     func fetchNewsAndDidUpdateTable(_ viewModel: NewsViewModel)
-    func didSelectItem(_ item: ArticleModel)
+    func didSelectItem(_ article: ArticleModel)
     func loadKeywordsAndDidUpdateKeysCollection(_ viewModel: NewsViewModel)
     func showAlertError(_ error: ErrorViewModel)
 }

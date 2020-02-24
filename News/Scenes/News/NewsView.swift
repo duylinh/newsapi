@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class NewsView: UIViewController {
+final class NewsView: BaseController {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -23,8 +23,6 @@ final class NewsView: UIViewController {
         return NewsViewDataSource(viewModel: self.viewModel)
     }()
     
-    private var index: Int = 0
-    
     // MARK: - Overridden: UIViewController
     
     override func viewDidLoad() {
@@ -33,8 +31,9 @@ final class NewsView: UIViewController {
         viewModel.delegate = self
         
         dataSource.configure(with: tableView)
-        
         dataSource.configure(with: collectionView)
+        
+        displayLoading()
         viewModel.fetchKeywords()
         viewModel.index = 0
     }
@@ -44,11 +43,15 @@ extension NewsView: NewsViewModelDelegate {
     func fetchNewsAndDidUpdateTable(_ viewModel: NewsViewModel) {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.hideLoading()
         }
     }
     
-    func didSelectItem(_ item: ArticleModel) {
-        
+    func didSelectItem(_ article: ArticleModel) {
+        let controller = ArticleDetailView.instantiate()
+        self.navigationController?.push(controller, animated: false, completion: {
+            controller.article = article
+        })
     }
     
     func loadKeywordsAndDidUpdateKeysCollection(_ viewModel: NewsViewModel) {
@@ -58,6 +61,6 @@ extension NewsView: NewsViewModelDelegate {
     }
     
     func showAlertError(_ error: ErrorViewModel) {
-        
+        self.hideLoading()
     }
 }
