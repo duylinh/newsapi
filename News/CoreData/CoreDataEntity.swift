@@ -22,4 +22,5 @@ class CoreDataEntity: CoreDataManager {
 // MARK: - Add your entities here
 extension CoreDataManager {
     static let Keyword = CoreDataEntity("Keyword")
+    static let User = CoreDataEntity("User")
 }

@@ -73,6 +73,8 @@
 		3F915A5D240441A5007E4736 /* CenterLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F915A5C240441A5007E4736 /* CenterLayout.swift */; };
 		3F915A5F24049CB4007E4736 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F915A5E24049CB4007E4736 /* UserModel.swift */; };
 		3F915A6224049E28007E4736 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F915A6124049E28007E4736 /* RegisterController.swift */; };
+		3F915A652404A3ED007E4736 /* Model-V2-to-V3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3F915A642404A3ED007E4736 /* Model-V2-to-V3.xcmappingmodel */; };
+		3F915A672404A410007E4736 /* CoreDataManager+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F915A662404A410007E4736 /* CoreDataManager+User.swift */; };
 		447DA5D724037D6E00877D56 /* KeywordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA5D624037D6E00877D56 /* KeywordModel.swift */; };
 		447DA5EE2403D0D400877D56 /* KeywordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA5ED2403D0D400877D56 /* KeywordCell.swift */; };
 		447DA5F12403D15800877D56 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA5F02403D15800877D56 /* RoundedView.swift */; };
@@ -173,6 +175,9 @@
 		3F915A5C240441A5007E4736 /* CenterLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterLayout.swift; sourceTree = "<group>"; };
 		3F915A5E24049CB4007E4736 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		3F915A6124049E28007E4736 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		3F915A632404A2FB007E4736 /* News 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "News 3.xcdatamodel"; sourceTree = "<group>"; };
+		3F915A642404A3ED007E4736 /* Model-V2-to-V3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "Model-V2-to-V3.xcmappingmodel"; sourceTree = "<group>"; };
+		3F915A662404A410007E4736 /* CoreDataManager+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+User.swift"; sourceTree = "<group>"; };
 		447DA5D624037D6E00877D56 /* KeywordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordModel.swift; sourceTree = "<group>"; };
 		447DA5ED2403D0D400877D56 /* KeywordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCell.swift; sourceTree = "<group>"; };
 		447DA5F02403D15800877D56 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -291,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				3F41EF6C240432EE00A68C2D /* CoreDataManager+Keyword.swift */,
+				3F915A662404A410007E4736 /* CoreDataManager+User.swift */,
 			);
 			path = "Models+Ex";
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 		3F2B67CD2402A7B50099B445 /* Mappings */ = {
 			isa = PBXGroup;
 			children = (
+				3F915A642404A3ED007E4736 /* Model-V2-to-V3.xcmappingmodel */,
 				3F41EF6A240430A100A68C2D /* Model-V1-to-V2.xcmappingmodel */,
 			);
 			path = Mappings;
@@ -874,6 +881,7 @@
 				3F41EF6424042C4300A68C2D /* URL+Ex.swift in Sources */,
 				3F2B67F22402A9030099B445 /* HeadlineView.swift in Sources */,
 				447DA5EE2403D0D400877D56 /* KeywordCell.swift in Sources */,
+				3F915A652404A3ED007E4736 /* Model-V2-to-V3.xcmappingmodel in Sources */,
 				3F41EF392403534600A68C2D /* ErrorViewModel.swift in Sources */,
 				447DA5D724037D6E00877D56 /* KeywordModel.swift in Sources */,
 				3F41EF36240350B600A68C2D /* ArticleCell.swift in Sources */,
@@ -900,6 +908,7 @@
 				3F2B681C2402AC7D0099B445 /* CoreDataEntity.swift in Sources */,
 				3F2B68262402C6210099B445 /* ServicesProtocol.swift in Sources */,
 				3F2B67F62402A9410099B445 /* HeadlineViewModel.swift in Sources */,
+				3F915A672404A410007E4736 /* CoreDataManager+User.swift in Sources */,
 				3F2B682A2402C65A0099B445 /* ImageDownloader.swift in Sources */,
 				3F41EF2B24034A1600A68C2D /* Colors.swift in Sources */,
 				3F915A5D240441A5007E4736 /* CenterLayout.swift in Sources */,
@@ -1245,10 +1254,11 @@
 		3F2B67CE2402A7B50099B445 /* News.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				3F915A632404A2FB007E4736 /* News 3.xcdatamodel */,
 				3F41EF6924042F0300A68C2D /* News 2.xcdatamodel */,
 				3F2B67CF2402A7B50099B445 /* News.xcdatamodel */,
 			);
-			currentVersion = 3F41EF6924042F0300A68C2D /* News 2.xcdatamodel */;
+			currentVersion = 3F915A632404A2FB007E4736 /* News 3.xcdatamodel */;
 			path = News.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
