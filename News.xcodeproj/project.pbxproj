@@ -71,6 +71,8 @@
 		3F41EF6D240432EE00A68C2D /* CoreDataManager+Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41EF6C240432EE00A68C2D /* CoreDataManager+Keyword.swift */; };
 		3F41EF6F2404399F00A68C2D /* FileManager+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41EF6E2404399F00A68C2D /* FileManager+Ex.swift */; };
 		3F915A5D240441A5007E4736 /* CenterLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F915A5C240441A5007E4736 /* CenterLayout.swift */; };
+		3F915A5F24049CB4007E4736 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F915A5E24049CB4007E4736 /* UserModel.swift */; };
+		3F915A6224049E28007E4736 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F915A6124049E28007E4736 /* RegisterController.swift */; };
 		447DA5D724037D6E00877D56 /* KeywordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA5D624037D6E00877D56 /* KeywordModel.swift */; };
 		447DA5EE2403D0D400877D56 /* KeywordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA5ED2403D0D400877D56 /* KeywordCell.swift */; };
 		447DA5F12403D15800877D56 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DA5F02403D15800877D56 /* RoundedView.swift */; };
@@ -169,6 +171,8 @@
 		3F41EF6C240432EE00A68C2D /* CoreDataManager+Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Keyword.swift"; sourceTree = "<group>"; };
 		3F41EF6E2404399F00A68C2D /* FileManager+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ex.swift"; sourceTree = "<group>"; };
 		3F915A5C240441A5007E4736 /* CenterLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterLayout.swift; sourceTree = "<group>"; };
+		3F915A5E24049CB4007E4736 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		3F915A6124049E28007E4736 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		447DA5D624037D6E00877D56 /* KeywordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordModel.swift; sourceTree = "<group>"; };
 		447DA5ED2403D0D400877D56 /* KeywordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCell.swift; sourceTree = "<group>"; };
 		447DA5F02403D15800877D56 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -316,6 +320,7 @@
 				3F2B67D72402A7B50099B445 /* Base */,
 				3F2B67D32402A7B50099B445 /* Headline */,
 				3F2B67D42402A7B50099B445 /* Profile */,
+				3F915A6024049DFA007E4736 /* Register */,
 				3F2B67D52402A7B50099B445 /* News */,
 				3F41EF3B2403F3ED00A68C2D /* ArticleDetail */,
 				3F2B67D62402A7B50099B445 /* Root */,
@@ -424,6 +429,7 @@
 				3F2B68312402C7FB0099B445 /* ArticleModel.swift */,
 				3F41EF382403534600A68C2D /* ErrorViewModel.swift */,
 				447DA5D624037D6E00877D56 /* KeywordModel.swift */,
+				3F915A5E24049CB4007E4736 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -574,6 +580,14 @@
 				3F915A5C240441A5007E4736 /* CenterLayout.swift */,
 			);
 			path = CenterLayout;
+			sourceTree = "<group>";
+		};
+		3F915A6024049DFA007E4736 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3F915A6124049E28007E4736 /* RegisterController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		447DA5D824037E2400877D56 /* Jsons */ = {
@@ -852,6 +866,7 @@
 				3F2B682E2402C6BF0099B445 /* NewsAPI.swift in Sources */,
 				447DA5F42403D1A900877D56 /* UIImage+Ex.swift in Sources */,
 				3F2B68022402A9CC0099B445 /* NewsViewDataSource.swift in Sources */,
+				3F915A6224049E28007E4736 /* RegisterController.swift in Sources */,
 				3F2B68182402AC550099B445 /* CoreDataManager.swift in Sources */,
 				3F41EF5824042A5C00A68C2D /* NSPersistentStoreDescription+Ex.swift in Sources */,
 				3F2B68322402C7FB0099B445 /* ArticleModel.swift in Sources */,
@@ -876,6 +891,7 @@
 				3F41EF3224034DB700A68C2D /* ArticleDetailTitleCell.swift in Sources */,
 				3F2B67F42402A92E0099B445 /* HeadlineViewDataSource.swift in Sources */,
 				3F41EF6B240430A100A68C2D /* Model-V1-to-V2.xcmappingmodel in Sources */,
+				3F915A5F24049CB4007E4736 /* UserModel.swift in Sources */,
 				3F41EF3D2403F40700A68C2D /* ArticleDetailView.swift in Sources */,
 				3F41EF5E24042AD400A68C2D /* CoreDataMigrationStep.swift in Sources */,
 				447DA5F12403D15800877D56 /* RoundedView.swift in Sources */,

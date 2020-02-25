@@ -28,6 +28,7 @@ final class ProfileView: BaseController {
         super.viewDidLoad()
         self.title = "Profile"
         self.rightBarTitle = "Keyword"
+        self.leftBarTitle = "Register"
         
         viewModel.delegate = self
         dataSource.configure(with: collectionView)
@@ -52,6 +53,13 @@ final class ProfileView: BaseController {
         self.presentPopup(controller: controller, completion: nil)
         delay(0.01) {
             controller?.fetchKeywordsFromLocalDB()
+        }
+    }
+    
+    override func leftMenuAction() {
+        let controller = RegisterController.instantiate()
+        self.present(controller, animated: false) {
+            
         }
     }
 }
