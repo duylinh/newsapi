@@ -76,15 +76,12 @@ extension ProfileView: ProfileViewModelDelegate {
 extension ProfileView: BottomKeywordPopupDelegate {
     func saveKeywords(_ keywords: [KeywordModel]) {
         defer {
-            self.viewModel.keywords = keywords
-//            let coreDataManager = CoreDataManager.shared
-//            coreDataManager.fetchAllKeywords { (results) in
-//                for key in keywords {
-//                    for item in results {
-//                        coreDataManager.updateKeyword(for: item, keyword: key.keyword, isSelected: key.isSelected) { (_) in }
-//                    }
-//                }
-//            }
+            let coreDataManager = CoreDataManager.shared
+            coreDataManager.update(keywords: keywords) { (status) in
+                if status {
+                    viewModel.fetchKeywordsActive()
+                }
+            }
         }
         self.dismissPopup { (_) in }
     }

@@ -76,6 +76,29 @@ extension CoreDataManager {
         completion(true)
     }
     
+    func update(keywords: [KeywordModel],
+                completion: ((Bool) -> Void)) {
+        if keywords.isEmpty {
+            completion(false)
+            return
+        }
+        
+        self.fetchAllKeywords { (results) in
+            var isContinue: Bool = true
+            for result in results {
+                isContinue = true
+                
+                for key in keywords {
+                    if result.keyword == key.keyword {
+                        isContinue = false
+                        self.updateKeyword(for: result, keyword: key.keyword, isSelected: key.isSelected) { (_) in }
+                    }
+                }
+            }
+        }
+        completion(true)
+    }
+    
     func deleteKeyword(_ keyword: Keyword,
                        completion: ((Bool) -> Void)) {
         self.deleteRecord(keyword)
